@@ -35,7 +35,7 @@ public class BackendServer {
         WebAppContext webapp = new WebAppContext();
         webapp.setContextPath("/");
 
-        webapp.setWar("front/src/main/webapp");
+        webapp.setWar("backend/src/main/webapp");
 
 //        webapp.setClassLoader(Thread.currentThread().getContextClassLoader());
         webapp.setConfigurationDiscovered(true);

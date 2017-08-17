@@ -20,7 +20,7 @@ public class IndexController {
 	private ProductService productService;
 
 	@RequestMapping("/")
-	public ModelAndView index(@RequestParam(defaultValue = "1") Integer pageNum) {
+	public ModelAndView index() {
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName("index");
 		return modelAndView;
