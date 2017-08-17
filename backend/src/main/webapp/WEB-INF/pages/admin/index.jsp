@@ -9,11 +9,6 @@
     <meta name="description" content="">
 </head>
 <body>
-    <h1>小程序demo</h1>
-    <ul>
-        <c:forEach items="${list}" var="item">
-            <li>${item.name}:${item.description}:${item.statusEnum.name}</li>
-        </c:forEach>
-    </ul>
+    <h1>小程序demo后台</h1>
 </body>
 </html>
