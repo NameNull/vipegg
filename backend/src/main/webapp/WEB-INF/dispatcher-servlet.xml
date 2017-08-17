@@ -9,9 +9,9 @@
 
 	<context:annotation-config />
 
-    <context:component-scan base-package="vip.vipegg.admin.controller" />
+    <context:component-scan base-package="vip.vipegg.controller" />
 
-	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver" p:prefix="/WEB-INF/pages/admin/" p:suffix=".jsp">
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver" p:prefix="/WEB-INF/pages/" p:suffix=".jsp">
 	</bean>
 
 	<mvc:annotation-driven>

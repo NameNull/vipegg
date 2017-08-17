@@ -1,6 +1,8 @@
-package vip.vipegg.admin.controller;
+package vip.vipegg.controller;
 
+import org.aspectj.apache.bcel.classfile.Constant;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Required;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -20,9 +22,14 @@ public class IndexController {
 	private ProductService productService;
 
 	@RequestMapping("/")
-	public ModelAndView index() {
+	public ModelAndView index(@RequestParam(defaultValue = "1") Integer pageNum) {
+		int pageSize = Constants.PAGE_ITEM_COUNT_5;
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName("index");
+		Map map = new HashMap();
+		map.put("statusEnum", ProductStatusEnum.ON);
+		List<Product> products = productService.findByProperties(map, (pageNum - 1) * pageSize, pageSize);
+		modelAndView.addObject("list", products);
 		return modelAndView;
 	}
 }
