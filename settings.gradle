@@ -1,2 +1,5 @@
 rootProject.name = 'vipegg'
+include 'front'
+include 'backend'
+include 'core'
 
