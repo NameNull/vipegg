@@ -37,7 +37,6 @@ public class FrontServer {
 
         webapp.setWar("front/src/main/webapp");
 
-//        webapp.setClassLoader(Thread.currentThread().getContextClassLoader());
         webapp.setConfigurationDiscovered(true);
         webapp.setParentLoaderPriority(true);
 
@@ -51,17 +50,6 @@ public class FrontServer {
                 "org.eclipse.jetty.server.webapp.ContainerIncludeJarPattern",
                 ".*/[^/]*servlet-api-[^/]*\\.jar$|.*/javax.servlet.jsp.jstl-.*\\.jar$|.*/[^/]*taglibs.*\\.jar$" );
 
-
-        // save jetty session to mongo
-        /*MongoClient mongoClient = new MongoClient("192.168.0.118");
-        DBCollection sessions = mongoClient.getDB("test").getCollection("sessions");
-        MongoSessionIdManager mongoSessionIdManager = new MongoSessionIdManager(server, sessions);
-        mongoSessionIdManager.setWorkerName("node1");
-        mongoSessionIdManager.setScavengePeriod(1800);
-        server.setSessionIdManager(mongoSessionIdManager);
-        MongoSessionManager mongoMgr = new MongoSessionManager();
-        mongoMgr.setSessionIdManager(mongoSessionIdManager);
-        webapp.setSessionHandler(new SessionHandler(mongoMgr));*/
         server.setHandler(handlerCollection);
 
         server.start();
