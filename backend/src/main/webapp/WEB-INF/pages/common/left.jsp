@@ -4,6 +4,9 @@
 		<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
 			<ul class="nav" id="side-menu">
 				<li>
+					<a href="#"><i class="fa fa-home nav_icon"></i>主页</a>
+				</li>
+				<li>
 					<a href="#"><i class="fa fa-table nav_icon"></i>商品<span class="nav-badge">12</span> <span class="fa arrow"></span></a>
 					<ul class="nav nav-second-level collapse">
 						<li>
