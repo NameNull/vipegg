@@ -3,6 +3,7 @@ package vip.vipegg.model;
 import vip.vipegg.Enum.ProductStatusEnum;
 
 import javax.persistence.*;
+import java.util.Date;
 
 /**
  * Created by yujie on 2017/8/17.
@@ -19,6 +20,8 @@ public class Product {
     private int num;
     private int buyNum;
     private ProductStatusEnum statusEnum;
+    private Date createTime;
+    private Date updateTime;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -92,5 +95,23 @@ public class Product {
 
     public void setStatusEnum(ProductStatusEnum statusEnum) {
         this.statusEnum = statusEnum;
+    }
+
+    @Column(name = "create_time")
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    @Column(name = "update_time")
+    public Date getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
     }
 }

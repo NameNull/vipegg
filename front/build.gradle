@@ -3,8 +3,8 @@ apply plugin: "war"
 dependencies {
     compile project(":core")
     compile "org.hibernate:hibernate-core:$hibernateVersion"
-    compile "org.eclipse.jetty:jetty-webapp:$jettyVersion"
-    compile "org.eclipse.jetty:jetty-annotations:$jettyVersion"
+    testCompile "org.eclipse.jetty:jetty-webapp:$jettyVersion"
+    testCompile "org.eclipse.jetty:jetty-annotations:$jettyVersion"
     testCompile "org.eclipse.jetty:apache-jsp:$jettyVersion"
     testCompile "org.eclipse.jetty:apache-jstl:$jettyVersion"
 }

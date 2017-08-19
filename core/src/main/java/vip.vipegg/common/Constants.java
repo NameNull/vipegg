@@ -9,4 +9,5 @@ public interface Constants {
     int PAGE_ITEM_COUNT_10 = 10;
     int PAGE_ITEM_COUNT_20 = 20;
     int PAGE_ITEM_COUNT_40 = 40;
+    String Admin_SESSION = "admin_session";
 }
