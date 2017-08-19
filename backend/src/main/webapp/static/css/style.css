@@ -385,7 +385,7 @@ li.dropdown.head-dpdn {
     border-left: 1px solid #E0E0E0;
 	float: left;
 }
-li.dropdown.head-dpdn:nth-child(3) {
+li.dropdown.head-dpdn:last-child {
     border-right: 1px solid #E0E0E0;
 }
 li.dropdown.head-dpdn a.dropdown-toggle {
@@ -783,7 +783,7 @@ ul.dropdown-menu {
 .profile_details ul li ul.dropdown-menu.drp-mnu {
     padding: 1em;
     min-width: 190px;
-    top: 122%;
+    top: 138%;
     left:0%;
 }
 ul.dropdown-menu.drp-mnu li {

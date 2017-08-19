@@ -4,83 +4,62 @@
 		<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
 			<ul class="nav" id="side-menu">
 				<li>
-					<a href="index.html"><i class="fa fa-home nav_icon"></i>控制面板</a>
-				</li>
-				<li>
-					<a href="#"><i class="fa fa-cogs nav_icon"></i>Components <span class="nav-badge">12</span> <span class="fa arrow"></span></a>
+					<a href="#"><i class="fa fa-table nav_icon"></i>商品<span class="nav-badge">12</span> <span class="fa arrow"></span></a>
 					<ul class="nav nav-second-level collapse">
 						<li>
-							<a href="grids.html">Grid System</a>
-						</li>
-						<li>
-							<a href="media.html">Media Objects</a>
+							<a href="grids.html">商品列表</a>
 						</li>
 					</ul>
-					<!-- /nav-second-level -->
 				</li>
-				<li class="">
-					<a href="#"><i class="fa fa-book nav_icon"></i>UI Elements <span class="fa arrow"></span></a>
+				<li>
+					<a href="widgets.html"><i class="fa fa-th-large nav_icon"></i>会员<span class="nav-badge">12</span> <span class="fa arrow"></span></a>
 					<ul class="nav nav-second-level collapse">
 						<li>
-							<a href="general.html">General<span class="nav-badge-btm">08</span></a>
-						</li>
-						<li>
-							<a href="typography.html">Typography</a>
+							<a href="inbox.html">会员列表 <span class="nav-badge-btm">05</span></a>
 						</li>
 					</ul>
-					<!-- /nav-second-level -->
 				</li>
 				<li>
-					<a href="widgets.html"><i class="fa fa-th-large nav_icon"></i>Widgets <span class="nav-badge-btm">08</span></a>
-				</li>
-				<li>
-					<a href="#"><i class="fa fa-envelope nav_icon"></i>Mailbox<span class="fa arrow"></span></a>
+					<a href="#"><i class="fa fa-envelope nav_icon"></i>消息<span class="fa arrow"></span></a>
 					<ul class="nav nav-second-level collapse">
 						<li>
-							<a href="inbox.html">Inbox <span class="nav-badge-btm">05</span></a>
-						</li>
-						<li>
-							<a href="compose.html">Compose email</a>
+							<a href="inbox.html">会员催货 <span class="nav-badge-btm">05</span></a>
 						</li>
 					</ul>
-					<!-- //nav-second-level -->
 				</li>
 				<li>
-					<a href="tables.html"><i class="fa fa-table nav_icon"></i>Tables <span class="nav-badge">05</span></a>
-				</li>
-				<li>
-					<a href="#"><i class="fa fa-check-square-o nav_icon"></i>Forms<span class="fa arrow"></span></a>
+					<a href="#"><i class="fa fa-cogs nav_icon"></i>系统<span class="nav-badge">12</span> <span class="fa arrow"></span></a>
 					<ul class="nav nav-second-level collapse">
 						<li>
-							<a href="forms.html">Basic Forms <span class="nav-badge-btm">07</span></a>
-						</li>
-						<li>
-							<a href="validation.html">Validation</a>
+							<a href="grids.html">权限列表</a>
 						</li>
 					</ul>
-					<!-- //nav-second-level -->
-				</li>
-				<li>
-					<a href="#"><i class="fa fa-file-text-o nav_icon"></i>Pages<span class="nav-badge-btm">02</span><span class="fa arrow"></span></a>
 					<ul class="nav nav-second-level collapse">
 						<li>
-							<a href="login.html">Login</a>
-						</li>
-						<li>
-							<a href="signup.html">SignUp</a>
-						</li>
-						<li>
-							<a href="blank-page.html">Blank Page</a>
+							<a href="grids.html">角色列表</a>
 						</li>
 					</ul>
-					<!-- //nav-second-level -->
+					<ul class="nav nav-second-level collapse">
+						<li>
+							<a href="grids.html">系统参数</a>
+						</li>
+					</ul>
 				</li>
 				<li>
-					<a href="charts.html" class="chart-nav"><i class="fa fa-bar-chart nav_icon"></i>Charts <span class="nav-badge-btm pull-right">new</span></a>
+					<a href="charts.html" class="chart-nav"><i class="fa fa-bar-chart nav_icon"></i>图表</a>
+					<ul class="nav nav-second-level collapse">
+						<li>
+							<a href="grids.html">交易额表</a>
+						</li>
+					</ul>
+					<ul class="nav nav-second-level collapse">
+						<li>
+							<a href="grids.html">收入额表</a>
+						</li>
+					</ul>
 				</li>
 			</ul>
 			<div class="clearfix"> </div>
-			<!-- //sidebar-collapse -->
 		</nav>
 	</div>
 </div>
