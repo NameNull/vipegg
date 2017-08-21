@@ -11,5 +11,5 @@ public interface Constants {
     int PAGE_ITEM_COUNT_40 = 40;
     String Admin_SESSION = "admin_session";
     String UTF8_CHARSET = "UTF-8";
-    String FORWARD_URL = "forward_url";
+    String PERMISSIONS = "permissions";
 }

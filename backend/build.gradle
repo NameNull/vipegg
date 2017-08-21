@@ -2,6 +2,7 @@ apply plugin: "war"
 
 dependencies {
     compile project(":core")
+    compile "org.apache.shiro:shiro-spring:1.2.4"
     testCompile "org.eclipse.jetty:jetty-webapp:$jettyVersion"
     testCompile "org.eclipse.jetty:jetty-annotations:$jettyVersion"
     testCompile "org.eclipse.jetty:apache-jsp:$jettyVersion"

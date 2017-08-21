@@ -13,4 +13,11 @@ public class IndexController {
 		modelAndView.setViewName("index");
 		return modelAndView;
 	}
+
+	@RequestMapping("/test")
+	public ModelAndView test() {
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.setViewName("index");
+		return modelAndView;
+	}
 }

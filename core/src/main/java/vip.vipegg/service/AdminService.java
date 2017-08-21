@@ -34,4 +34,11 @@ public class AdminService {
         }
         return null;
     }
+
+    public List<Admin> findByProperty(String name, Object value) {
+        Map map = new HashMap();
+        map.put(name, value);
+        List<Admin> all = findByProperties(map, null, null);
+        return all;
+    }
 }

@@ -1,5 +1,6 @@
 package vip.vipegg.model;
 
+import vip.vipegg.Enum.AdminStatusEnum;
 import vip.vipegg.Enum.ProductStatusEnum;
 
 import javax.persistence.*;
@@ -16,6 +17,9 @@ public class Admin {
     private Integer telephone;
     private String password;
     private Date createTime;
+    private String name;
+    private AdminStatusEnum statusEnum;
+    private Role role;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -52,5 +56,34 @@ public class Admin {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Column()
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @ManyToOne()
+    @JoinColumn(name = "role_id")
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
+    @Enumerated
+    @Column(name = "status")
+    public AdminStatusEnum getStatusEnum() {
+        return statusEnum;
+    }
+
+    public void setStatusEnum(AdminStatusEnum statusEnum) {
+        this.statusEnum = statusEnum;
     }
 }
