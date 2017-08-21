@@ -10,12 +10,6 @@ import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.webapp.Configuration;
 import org.eclipse.jetty.webapp.WebAppContext;
 
-/**
- * 招股金服
- * CopyRight : www.zhgtrade.com
- * Author : 林超（362228416@qq.com）
- * Date： 2016-06-22 16:42
- */
 public class FrontServer {
 
     public static void main(String[] args) throws Exception {

@@ -10,12 +10,6 @@ import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.webapp.Configuration;
 import org.eclipse.jetty.webapp.WebAppContext;
 
-/**
- * 招股金服
- * CopyRight : www.zhgtrade.com
- * Author : 林超（362228416@qq.com）
- * Date： 2016-06-22 16:42
- */
 public class BackendServer {
 
     public static void main(String[] args) throws Exception {
@@ -48,8 +42,7 @@ public class BackendServer {
 
         webapp.setAttribute(
                 "org.eclipse.jetty.server.webapp.ContainerIncludeJarPattern",
-                ".*/[^/]*servlet-api-[^/]*\\.jar$|.*/javax.servlet.jsp.jstl-.*\\.jar$|.*/[^/]*taglibs.*\\.jar$" );
-
+                ".*/[^/]*servlet-api-[^/]*\\.jar$|.*/shiro-web-.*\\.jar$|.*/javax.servlet.jsp.jstl-.*\\.jar$|.*/[^/]*taglibs.*\\.jar$");
         server.setHandler(handlerCollection);
 
         server.start();
