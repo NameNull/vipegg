@@ -1,7 +1,11 @@
 package vip.vipegg.controller;
 
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -10,6 +14,9 @@ import vip.vipegg.common.Constants;
 import vip.vipegg.controller.common.BaseController;
 import vip.vipegg.model.Admin;
 import vip.vipegg.service.AdminService;
+import vip.vipegg.service.ValidateService;
+import vip.vipegg.util.StringUtils;
+import vip.vipegg.util.Utils;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
@@ -18,7 +25,7 @@ import java.util.Map;
 @Controller
 public class UserController extends BaseController{
 	@Autowired
-	private AdminService adminService;
+	private ValidateService validateService;
 
 	@RequestMapping("/login")
 	public ModelAndView login() {
@@ -27,17 +34,29 @@ public class UserController extends BaseController{
 		return modelAndView;
 	}
 
-	@ResponseBody
 	@RequestMapping("/loginAjax")
-	public Object loginAjax(HttpServletRequest request, @RequestParam Integer telephone, @RequestParam String password) {
+	public Object loginAjax(HttpServletRequest request, @RequestParam String mobile, @RequestParam String password){
 		Map map = new HashMap();
-		Admin admin = adminService.login(telephone, password);
-		if(admin == null){
-			map.put("code", 0);
-			return  map;
+		String ip = Utils.getIpAddr(request);
+		int admin_limit = this.validateService.getLimitCount(ip);
+		if (admin_limit <= 0) {
+			map.put("error", "连续登陆错误"+Constants.ADMIN_LOGIN_ERROR_COUNT+"次，为安全起见，禁止登陆2小时！");
+			return map;
 		}
-		request.getSession().setAttribute(Constants.Admin_SESSION, admin);
-		map.put("code", 200);
+
+		Subject admin = SecurityUtils.getSubject();
+		UsernamePasswordToken token = new UsernamePasswordToken(mobile, Utils.MD5(password));
+		token.setRememberMe(true);
+
+		try {
+			admin.login(token);
+		} catch (Exception e) {
+			token.clear();
+			this.validateService.updateLimitCount(ip);
+			map.put("error", e.getMessage());
+			return map;
+		}
+		map.put("code",200);
 		return map;
 	}
 

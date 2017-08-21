@@ -67,7 +67,7 @@ public class ShiroDbRealm extends AuthorizingRealm{
 		admin.setPassword(new String(token.getPassword()));
 
         // 短信验证码登录
-        List<Admin> all = adminService.findByProperty("mobile", token.getUsername());
+        List<Admin> all = adminService.findByProperty("telephone", token.getUsername());
         if(CollectionUtils.isEmpty(all) || !String.valueOf(token.getPassword()).equals(all.get(0).getPassword())){
             throw new AuthenticationException("用户名或密码错误！");
         }

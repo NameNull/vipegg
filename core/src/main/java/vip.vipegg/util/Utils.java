@@ -507,8 +507,6 @@ public class Utils {
 	}
 
 	public static void main(String[] args) {
-		byte[] bytes = new byte[10];
-		isImage(bytes);
-		System.out.println(bytes[0]);
+		System.out.println(Utils.MD5("123123"));
 	}
 }

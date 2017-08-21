@@ -12,4 +12,6 @@ public interface Constants {
     String Admin_SESSION = "admin_session";
     String UTF8_CHARSET = "UTF-8";
     String PERMISSIONS = "permissions";
+    int ADMIN_LOGIN_ERROR_COUNT = 5;
+    boolean closeLimit = false;
 }
