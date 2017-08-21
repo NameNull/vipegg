@@ -9,4 +9,7 @@
 <script src="/static/js/bootstrap.js"></script>
 <script src="/static/js/classie.js"></script>
 <script src="/static/js/jquery.nicescroll.js"></script>
+<script src="/static/js/util/util.js"></script>
+<script src="/static/js/util/tm_dialog.js"></script>
+<script src="/static/js/util/ajax.js"></script>
 <script src="/static/js/common.js"></script>

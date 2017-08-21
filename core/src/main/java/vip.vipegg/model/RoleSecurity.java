@@ -15,7 +15,7 @@ public class RoleSecurity implements java.io.Serializable {
 	@GenericGenerator(name = "generator", strategy = "native")
 	@Id
 	@GeneratedValue(generator = "generator")
-	@Column(name = "fid", unique = true, nullable = false)
+	@Column(name = "id", unique = true, nullable = false)
 	public Integer getId() {
 		return this.id;
 	}

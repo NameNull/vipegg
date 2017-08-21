@@ -15,6 +15,8 @@ public class CountLimit implements java.io.Serializable {
 	private Timestamp createTime;
 	private int count;
 
+	public CountLimit(){}
+
 	public CountLimit(Integer count, String ip){
 		this.count = count;
 		this.ip = ip;

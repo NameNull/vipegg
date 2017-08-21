@@ -14,7 +14,7 @@ import java.util.Date;
 @Table(name = "admin")
 public class Admin {
     private Integer id;
-    private Integer telephone;
+    private String telephone;
     private String password;
     private Date createTime;
     private String name;
@@ -41,11 +41,11 @@ public class Admin {
     }
 
     @Column(name="telephone")
-    public Integer getTelephone() {
+    public String getTelephone() {
         return telephone;
     }
 
-    public void setTelephone(Integer telephone) {
+    public void setTelephone(String telephone) {
         this.telephone = telephone;
     }
 

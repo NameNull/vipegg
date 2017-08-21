@@ -24,17 +24,6 @@ public class AdminService {
         return entityDao.findByProperties(propValueMap, offset, length);
     }
 
-    public Admin login(Integer telephone, String password) {
-        Map map = new HashMap();
-        map.put("telephone", telephone);
-        map.put("password", password);
-        List<Admin> admins = entityDao.findByProperties(map, null, null);
-        if(admins != null && admins.size() > 0){
-            return admins.get(0);
-        }
-        return null;
-    }
-
     public List<Admin> findByProperty(String name, Object value) {
         Map map = new HashMap();
         map.put(name, value);

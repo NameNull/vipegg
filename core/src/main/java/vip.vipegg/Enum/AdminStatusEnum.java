@@ -2,7 +2,7 @@ package vip.vipegg.Enum;
 
 public enum AdminStatusEnum {
 
-    NORMAL("正常"),FORBID("禁用");
+    FORBID("禁用"),NORMAL("正常");
 
     private String name;
 

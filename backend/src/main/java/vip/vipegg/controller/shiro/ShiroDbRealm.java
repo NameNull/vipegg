@@ -33,7 +33,7 @@ public class ShiroDbRealm extends AuthorizingRealm{
     		 //获取当前登录的用户名
             String name = (String) super.getAvailablePrincipal(principals);
             List<String> permissions = new ArrayList<String>();
-            List<Admin> all = adminService.findByProperty("name", name);
+            List<Admin> all = adminService.findByProperty("telephone", name);
             if(all != null && all.size() >0){
             	Admin admin = all.get(0);
             	if(admin.getRole() != null){

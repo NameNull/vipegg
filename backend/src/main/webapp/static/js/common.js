@@ -1,6 +1,6 @@
 
 $(function(){
-    $("input[name=passowrd]").focus(function(){
+    $("input[name=password]").focus(function(){
         $(this).attr("type", "password");
     });
 
