@@ -16,19 +16,14 @@
 
 package vip.vipegg.dao.common;
 
-import net.sf.ehcache.Cache;
 import org.hibernate.*;
-import org.hibernate.transform.Transformers;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataAccessException;
 import org.springframework.dao.DataAccessResourceFailureException;
 import org.springframework.dao.support.DaoSupport;
 import org.springframework.orm.hibernate3.HibernateTemplate;
 import org.springframework.orm.hibernate3.SessionFactoryUtils;
 
-import java.lang.annotation.Annotation;
-import java.util.List;
-import java.util.Map;
+
 
 /**
  * Convenient super class for Hibernate-based data access objects.
