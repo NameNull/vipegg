@@ -24,12 +24,13 @@
         <property name="unauthorizedUrl" value="/error/noPermission.htm" />
 		<property name="filterChainDefinitions">
 			<value>
-            /loginAjax = anon
-            /login = anon
-            / = authc
-            /loginOut = logout
-            /** = authc,perms
-		 	</value>
+				/loginAjax = anon
+				/login = anon
+				/ = authc
+				/loginOut = logout
+				/** = authc,perms
+				/static = anon
+			</value>
 		</property>
 	</bean>
 	<!-- 保证实现了Shiro内部lifecycle函数的bean执行 -->
