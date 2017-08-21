@@ -26,10 +26,10 @@
 			<value>
 				/loginAjax = anon
 				/login = anon
+				/static/** = anon
 				/ = authc
 				/loginOut = logout
 				/** = authc,perms
-				/static = anon
 			</value>
 		</property>
 	</bean>

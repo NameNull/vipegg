@@ -8,9 +8,9 @@ import org.springframework.web.servlet.ModelAndView;
 public class IndexController {
 
 	@RequestMapping("/")
-	public ModelAndView index() {
+	public ModelAndView indexForward() {
 		ModelAndView modelAndView = new ModelAndView();
-		modelAndView.setViewName("index");
+		modelAndView.setViewName("admin/index");
 		return modelAndView;
 	}
 }

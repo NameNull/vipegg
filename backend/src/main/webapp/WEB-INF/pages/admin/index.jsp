@@ -1,9 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@include file="./common/includes.jsp" %>
+<%@include file="../common/includes.jsp" %>
 <!DOCTYPE HTML>
 <html>
 <head>
-	<%@include file="./common/meta.jsp" %>
+	<%@include file="../common/meta.jsp" %>
 	<title>后台登录页</title>
 	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 
@@ -23,8 +23,8 @@
 </head> 
 <body class="cbp-spmenu-push">
 	<div class="main-content">
-		<%@include file="./common/left.jsp" %>
-		<%@include file="./common/head.jsp" %>
+		<%@include file="../common/left.jsp" %>
+		<%@include file="../common/head.jsp" %>
 		<div id="page-wrapper">
 			<div class="main-page">
 				<div class="row-one">
@@ -371,7 +371,7 @@
 				<div class="clearfix"> </div>
 			</div>
 		</div>
-		<%@include file="./common/foot.jsp" %>
+		<%@include file="../common/foot.jsp" %>
 	</div>
 	<script src="/static/js/classie.js"></script>
 	<script>
@@ -394,6 +394,6 @@
 	</script>
 	<script src="/static/js/jquery.nicescroll.js"></script>
 	<script src="/static/js/scripts.js"></script>
-	<%@include file="./common/script.jsp" %>
+	<%@include file="../common/script.jsp" %>
 </body>
 </html>
