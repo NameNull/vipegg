@@ -16,20 +16,13 @@
 		<div id="header">
 			<div class="headerNav">
 				<ul class="nav">
-						<li><a href="webBaseInfoList" target="dialog"
-							width="600" title="网站信息设置">网站信息设置</a></li>
-					<li><a
-						href="goAdminJSP?url=updateAdminPassword"
-						target="dialog" width="700" title="修改密码">修改密码</a></li>
-					<li><a href="loginOut">退出</a>
-					</li>
+					<li><a href="loginOut">退出</a></li>
 				</ul>
 				<ul class="themeList" id="themeList">
 					<li theme="default"><div class="selected">蓝色</div>
 					</li>
 					<li theme="green"><div>绿色</div>
 					</li>
-					<li theme="red"><div>红色</div></li>
 					<li theme="purple"><div>紫色</div>
 					</li>
 					<li theme="silver"><div>银色</div>
@@ -39,7 +32,6 @@
 				</ul>
 			</div>
 		</div>
-
 		<div id="leftside">
 			<div id="sidebar_s">
 				<div class="collapse">
@@ -69,9 +61,7 @@
 						</ul>
 					</div>
 					<div class="tabsLeft">left</div>
-					<!-- 禁用只需要添加一个样式 class="tabsLeft tabsLeftDisabled" -->
 					<div class="tabsRight">right</div>
-					<!-- 禁用只需要添加一个样式 class="tabsRight tabsRightDisabled" -->
 					<div class="tabsMore">more</div>
 				</div>
 				<ul class="tabsMoreList">
@@ -82,8 +72,7 @@
 					<div class="page unitBox">
 						<div class="accountInfo">
 							<p>
-								<span><font color="red">欢迎管理员: <b>${login_admin.fname}</b>
-										登陆,当前时间:${dateTime}</font> </span>
+								<span>${sessionScope.admin_session.role.name}: <b>${sessionScope.admin_session.name}</b></span>
 							</p>
 						</div>
 						<div>
