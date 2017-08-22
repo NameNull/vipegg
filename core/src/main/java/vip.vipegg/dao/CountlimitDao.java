@@ -79,7 +79,7 @@ public class CountlimitDao extends HibernateDaoSupport {
 			queryObject.setParameter(0, value);
 			return queryObject.list();
 		} catch (RuntimeException re) {
-			log.error("find by property name failed", re);
+			log.error("find by property "+ propertyName +" failed", re);
 			throw re;
 		}
 	}
